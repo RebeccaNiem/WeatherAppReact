@@ -29,7 +29,10 @@ export default function Weather() {
       <h1>San Fransisco</h1>
       <p></p>
 
-      <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" />
+      <img
+        src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+        alt="Weather icon"
+      />
       <ul>
         <li>Sunday 19:02, few cluds</li>
         <li>Humidity:85%,</li>
