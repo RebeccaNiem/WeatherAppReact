@@ -15,13 +15,13 @@ function App() {
           >
             Netlify
           </a>{" "}
-          and is open sourced on
+          and is open sourced on{" "}
           <a
             href="https://github.com/RebeccaNiem/weather-react-App"
             target_blank
             rel="noopener noreferrer"
           >
-            Guthub
+            Github
           </a>
         </footer>
       </div>

@@ -30,13 +30,13 @@ export default function Weather() {
 
       <h1>San Fransisco</h1>
       <ul>
-        <li>Sunday 14.09,</li>
+        <li>Sunday 14.09, 10:00am</li>
         <li> few clouds</li>
       </ul>
       <p></p>
 
       <div className="row">
-        <div className="col-4">
+        <div className="col-9">
           <img
             src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
             alt="Weather icon"
@@ -45,7 +45,7 @@ export default function Weather() {
           <span className="unit">°C</span>
         </div>
 
-        <div className="col-8">
+        <div className="col-3">
           <ul>
             <li>precipitaion:15% </li>
             <li>Humidity:85%,</li>
