@@ -36,7 +36,7 @@ export default function Weather() {
       <p></p>
 
       <div className="row">
-        <div className="col-9">
+        <div className="col-6">
           <img
             src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
             alt="Weather icon"
@@ -45,7 +45,7 @@ export default function Weather() {
           <span className="unit">°C</span>
         </div>
 
-        <div className="col-3">
+        <div className="col-6">
           <ul>
             <li>precipitaion:15% </li>
             <li>Humidity:85%,</li>
