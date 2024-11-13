@@ -1,25 +1,34 @@
 import React, { useState } from "react";
+import "./Weather.css";
+import axios from "axios";
+
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
-import axios from "axios";
-import "./Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
+    console.log(response.data);
+
     setWeatherData({
       ready: true,
       coordinates: response.data.coordinates,
-      temperature: response.data.main.temperature,
-      humidity: response.data.main.humidity,
-      date: new Date(response.data.dt * 1000),
-      description: response.data.weather[0].description,
-      icon: response.data.weather[0].icon,
+      temperature: response.data.temperature.current,
       wind: response.data.wind.speed,
+      humidity: response.data.temperature.humidity,
       city: response.data.name,
+      date: new Date(response.data.time * 1000),
+      icon: response.data.condition.icon,
+      description: response.data.condition.description,
     });
+  }
+
+  function search() {
+    const apiKey = "bd79ao40tde3dec118ca46bc3e6dd55f";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+    axios.get(apiUrl).then(handleResponse);
   }
 
   function handleSubmit(event) {
@@ -29,12 +38,6 @@ export default function Weather(props) {
 
   function handleCityChange(event) {
     setCity(event.target.value);
-  }
-
-  function search() {
-    const apiKey = "280o02ba0daf2b414a53ctfe4e6155a2";
-    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
-    axios.get(apiUrl).then(handleResponse);
   }
 
   if (weatherData.ready) {
@@ -62,6 +65,7 @@ export default function Weather(props) {
           </div>
         </form>
 
+        <p></p>
         <p></p>
         <WeatherInfo data={weatherData} />
         <WeatherForecast coordinates={weatherData.coordinates} />
