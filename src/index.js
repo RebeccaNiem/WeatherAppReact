@@ -5,7 +5,6 @@ import "./Weather.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ReactAnimatedWeather from "react-animated-weather";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
