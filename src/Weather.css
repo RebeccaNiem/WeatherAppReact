@@ -41,6 +41,10 @@
   margin: 10px auto;
 }
 
+.weather img {
+  width: 100px;
+}
+
 .Weather .unit {
   font-size: 16px;
   font-weight: 400;
