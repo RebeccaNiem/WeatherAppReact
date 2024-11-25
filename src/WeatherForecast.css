@@ -2,7 +2,18 @@
   text-align: center;
   padding: 10px;
 }
+
 .WeatherForecast-temperaturre-min {
   opacity: 0.6;
   margin-left: 10px;
+  line-height: 20px;
+}
+
+.WeatherTemperature {
+  padding: 1px;
+}
+
+.WeatherForecast-temperatures {
+  line-height: 1px;
+  padding: -20px;
 }
