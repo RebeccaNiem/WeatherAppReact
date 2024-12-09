@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./WeatherForecast.css";
 import axios from "axios";
+import WeatherIcon from "./WeatherIcon";
 import WeatherForecastDay from "./WeatherForecastDay";
 
 export default function WeatherForecast(props) {
@@ -12,20 +13,13 @@ export default function WeatherForecast(props) {
   }, [props.coordinates]);
 
   function handleResponse(response) {
-    console.log(props);
+    console.log(response.data);
+  
     setForecast(response.data.daily);
     setLoaded(true);
   }
 
-  function load() {
-    let apiKey = "bd79ao40tde3dec118ca46bc3e6dd55f";
-    let longitude = props.coordinates.longitude;
-    let latitude = props.coordinates.latitude;
-
-    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${latitude}&lon=${longitude}&key=${apiKey}&units=metric`;
-
-    axios.get(apiUrl).then(handleResponse);
-  }
+  function load() {}
 
   if (loaded) {
     return (
@@ -47,7 +41,13 @@ export default function WeatherForecast(props) {
       </div>
     );
   } else {
-    load();
+    let apiKey = "bd79ao40tde3dec118ca46bc3e6dd55f";
+    let longitude = props.coordinates.longitude;
+    let latitude = props.coordinates.latitude;
+
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${latitude}&lon=${longitude}&key=${apiKey}&units=metric`;
+
+    axios.get(apiUrl).then(handleResponse);
 
     return null;
   }
