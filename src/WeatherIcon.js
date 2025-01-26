@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReactAnimatedWeather from "react-animated-weather";
 
 export default function WeatherIcon(props) {
+  const [icon, setIcon] = useState("");
+
   const codeMapping = {
     "01d": "CLEAR_DAY",
     "01n": "CLEAR_NIGHT",
@@ -24,13 +26,11 @@ export default function WeatherIcon(props) {
   };
 
   return (
-    <div>
-      <ReactAnimatedWeather
-        icon={codeMapping[props.code]}
-        color="#1e1e1e"
-        size={props.size}
-        animate={true}
-      />
-    </div>
+    <ReactAnimatedWeather
+      icon={codeMapping[props.code]}
+      color="#1e1e1e"
+      size={40}
+      animate={true}
+    />
   );
 }

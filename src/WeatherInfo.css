@@ -1,0 +1,13 @@
+.bordered-list {
+  border: 2px solid #f6f7f8;
+  padding: 10px 10px 20px;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  size: 40px;
+}
+.bordered-list :hover {
+  border-color: #2ecc71;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}

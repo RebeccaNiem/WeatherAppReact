@@ -1,6 +1,7 @@
 .WeatherForecast {
   text-align: center;
-  padding: 10px;
+  padding: 30px 1px 1px;
+  color: white;
 }
 
 .WeatherForecast-temperaturre-min {
@@ -10,10 +11,17 @@
 }
 
 .WeatherTemperature {
-  padding: 1px;
+  padding: 10px;
+  color: white;
 }
 
 .WeatherForecast-temperatures {
-  line-height: 0px;
+  line-height: 20px;
   padding: -20px;
+  display: block;
+  color: white;
+  text-shadow: 70%;
+}
+img {
+  height: 80px;
 }

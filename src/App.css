@@ -4,9 +4,10 @@
 }
 
 .App footer {
-  font-size: 12px;
+  font-size: 10px;
   margin: 15px 0;
   text-align: center;
+  color: rgba(0, 0, 0, 0.315);
 }
 
 .App-logo {
