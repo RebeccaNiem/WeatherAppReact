@@ -44,7 +44,7 @@
 }
 
 .Weather ul {
-  margin: -20px 10px 10px 10px;
+  margin: -20px 10px 10px 100px;
   margin-left: 70px;
   padding-top: -50px;
   color: rgba(255, 255, 255, 0.079);
