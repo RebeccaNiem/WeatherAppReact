@@ -24,3 +24,13 @@
 img {
   height: 80px;
 }
+
+@media (max-width: 900px) {
+  .WeatherForecast {
+    text-align: center;
+    font-size: 15px;
+  }
+  .WeatherForecast-day {
+    font-size: 15px;
+  }
+}

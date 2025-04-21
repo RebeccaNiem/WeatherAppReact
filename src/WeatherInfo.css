@@ -1,17 +1,38 @@
 .horizontal-list {
-  display: flex; /* Makes list items align in a row */
+  display: flex;
   justify-content: center;
-  list-style-type: none; /* Removes default bullet points */
-  padding: 0; /* Removes default padding */
-  margin: 0; /* Removes default margin */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 .horizontal-list {
-  list-style-type: none; /* Removes default bullet points */
-  padding: 0; /* Removes default padding */
-  margin: 0; /* Removes default margin */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .horizontal-list li {
-  display: inline-block; /* Makes each list item display inline */
-  margin-right: 30px; /* Adds space between items */
+  display: inline-block;
+  margin-right: 30px;
+}
+
+@media (max-width: 800px) {
+  .horizontal-list {
+    display: block;
+    padding: 5px;
+  }
+
+  .horizontal-list li {
+    margin-right: 5px;
+    font-size: 15px;
+    margin-left: 80px;
+    margin: -20px;
+  }
+
+  .Weather ul {
+    margin-right: 10px;
+    max-width: 60%;
+    font-size: 20px;
+    margin-top: 30px;
+  }
 }

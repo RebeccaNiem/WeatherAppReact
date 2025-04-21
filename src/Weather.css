@@ -36,7 +36,7 @@
 }
 
 .Weather li {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 10px;
   height: 30px;
   list-style: none;
@@ -44,11 +44,10 @@
 }
 
 .Weather ul {
-  padding: 20px;
-
+  margin-left: 50px;
   max-width: 50%;
   font-size: 80px;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 img {
@@ -92,4 +91,18 @@ canvas {
   padding: 10px;
   color: white;
   padding-left: 160px;
+}
+
+@media (max-width: 800px) {
+  .Weather .temperature {
+    font-size: 50px;
+
+    text-align: left;
+  }
+  .Weather .unit {
+    font-size: 12px;
+    font-weight: 300;
+    position: absolute;
+    margin-top: 50px;
+  }
 }
